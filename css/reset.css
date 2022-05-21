@@ -1,0 +1,293 @@
+:root {
+
+ --primary:rgb(94, 74, 117);
+ --primary-aux: rgb(64, 52, 75);
+ --secondary: rgb(220, 158, 248);
+ --secondary-aux: rgb(148, 103, 173);
+ --light: rgb(199, 139, 255);
+ --light-aux: rgb(188, 97, 248);
+ --dark: rgb(60, 32, 78);
+ --dark-aux: rgb(32, 14, 46);
+ --dark-super:  rgb(23, 0, 41);
+ --font-primary: 'Quicksand', sans-serif;
+ --shadow: 0px 3px 6px rgba(0,0,0,0.16); 
+}
+
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  background: var(--primary-aux);
+  font-family: var(--font-primary);
+}
+
+header {
+  padding: 1rem 2rem;
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > figure {
+  max-height: 3rem;
+}
+
+header > figure >img {
+  max-height: 3rem;
+  transform: scale(3);
+}
+
+nav {
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > a {
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  background: var(--dark);
+  font-size: 0.75rem;
+  display: inline-block;
+  text-transform: capitalize;
+  color: var(--light);
+}
+
+section.full-height {
+  min-height: 100vh;
+}
+
+section.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light);
+  background-image: url(/images/your_throne__medea_by_ariesqueenx_de58h6w.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+  
+
+section.welcome > .welcome-message {
+  max-width: 40vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  }
+
+section.welcome > .welcome-message > h1 {
+  font-size: 3rem;
+  color: var(--light-aux);
+  text-align: center;
+}
+
+section.welcome > .welcome-message > h3 {
+ font-size: 1.5rem;
+ color: var(--light);
+ margin-top: 1rem;
+ text-align: center;
+}
+
+section.welcome > .welcome-message > a {
+  width: 80%;
+  height: 3rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+  color: var(--dark-aux);
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 6px rgb(84, 65, 105);
+}
+
+section.welcome > .welcome-figure {
+  flex: 1;
+  max-width: 40vw;
+  height: 100vh;
+}
+
+section.welcome > .welcome-figure > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+section.show-case {
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  section.show-case > h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--light);
+  }
+
+  section.show-case > .cards-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  section.show-case > .cards-wrapper > .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--dark-aux);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    align-items: center;
+    position: relative;
+  }
+  
+  section.show-case > .cards-wrapper > .card::after,
+  section.show-case > .cards-wrapper > .card::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    box-shadow: var(--shadow);
+    
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+   }
+
+  section.show-case > .cards-wrapper > .card::before {
+    transform: translate(-50%, -50%) rotate(15deg);
+    box-shadow: var(--shadow);
+  }
+
+  section.show-case > .cards-wrapper > .card::after {
+    background: var(--dark-aux);
+    box-shadow: var(--shadow);
+  }
+
+  section.show-case > .cards-wrapper > .card> * {
+    z-index: 2;
+  }
+  
+  section.show-case strong {
+    text-align: center;
+    color: var(--light);
+  }
+
+  section.show-case figure {
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  section.show-case figure > img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+  }
+  section.about-us {
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.about-us > h2 {
+    font-size: 3rem;
+  }
+  
+  section.about-us > .about-info {
+    margin-top: 5rem;
+    padding: 2rem;
+    color: var(--dark);
+    max-width: 60%;
+    color: var(--light);
+  }
+
+  section.about-us > .about-info > p {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  section.show-case .card-detail {
+    text-align: justify;
+    max-width: 20rem;
+    padding: 0.5rem 0;
+    color: var(--light);
+  }
+
+  section.show-case .card-detail > p + p {
+    margin-top: 0.5rem;
+  }
+
+  section.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--dark-aux);
+    overflow: hidden;
+  }
+
+  section.social > h2 {
+    color:rgb(84, 65, 105);
+    font-size: 3rem;
+  }
+
+  section.social > .social-wrapper {
+    flex: 1;
+    display: flex;
+    width: 100%;
+  }
+
+  section.social .social-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: var(--light);
+    opacity: 0.5;
+    transition: opacity 150ms, background-color 250ms transform 300ms;
+    transition-delay: 100ms;
+  }
+
+  section.social .social-item:hover {
+    opacity:  1;
+    transform: skewX(10deg) scale(1.25);
+    background: var(--primary);
+    transition-delay: 0ms;
+    
+  }
+
+  footer {
+    background: var(--dark-super);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: var(--light-aux);
+  }
+ 
